@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/veer_gaudani/Documents/Work/Practice/C++/task-cli/task-cli'
+relocations:     []
+...
