@@ -1,7 +1,51 @@
 #include <iostream>
+#include <nlohmann/json.hpp>
+#include <iomanip>
 
 using namespace std;
+using json = nlohmann::json;
+
+void interpret_cmdline(string cmdline_input) {
+
+    // add "..." --> to add a task. Each task receives an auto-generated ID
+    // update <ID> "..." --> Update task based on a given ID
+    // delete <ID> --> delete a task given its ID
+    // mark-in-progress <ID> --> mark a task as "in-progress" given its ID
+    // mark-done <ID> --> mark a task as "done" given its ID
+    // list --> list all tasks
+            // done --> list tasks that are marked "done"
+            // todo --> list tasks that are unmarked
+            // in-progress --> list tasks marked "in progress"
+    
+
+    
+    
+    
+
+
+}
 
 int main() {
-    cout << "Hello World" << endl;
+    cout << "\n" << "Welcome to Task Tracker, a CLI app!" << "\n" << endl;
+
+    while (true) {
+        std::cout << "\033[32mtask-cli\033[0m ";
+        string userInput;
+
+        cin >> userInput;
+
+        if (userInput == "quit") {
+            break;
+        }
+
+        else if (userInput == "help") {
+            cout << "Help Page" << endl; 
+        }
+
+        interpret_cmdline(userInput);
+    }
+
+    return 0;
 }
+
+
