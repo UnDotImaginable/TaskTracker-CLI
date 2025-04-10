@@ -2,9 +2,11 @@
 
 
 #include <iostream>
+#include <nlohmann/json.hpp>
 #include <iomanip>
 
 using namespace std;
+using json = nlohmann::json;
 
 void interpret_cmdline(string cmdline_input) {
 
